@@ -1,0 +1,14 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+.menu 
+{
+    .menu-label, .menu-list a,.menu-list a:hover, .menu-list a.is-active{
+        padding-left: 40px
+    }
+}
+
+.navbar-brand {
+    width: 250px;
+}

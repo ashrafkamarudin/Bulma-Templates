@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  height: 100%; }
+
+.menu .menu-label, .menu .menu-list a, .menu .menu-list a:hover, .menu .menu-list a.is-active {
+  padding-left: 40px; }
+
+.navbar-brand {
+  width: 250px; }
+
+.content-area {
+  left: 250px;
+  padding: 25px;
+  background-color: whitesmoke;
+  width: 100%;
+  position: absolute; }
+
+.sidebar {
+  top: 0;
+  z-index: 1001;
+  position: fixed;
+  width: 250px;
+  padding-top: 0;
+  height: 100%;
+  transition: .05s ease-in; }
+
+.nav-admin {
+  margin-left: 275px; }
+
+.navbar-brand {
+  justify-content: center; }

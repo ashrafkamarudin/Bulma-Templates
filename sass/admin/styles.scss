@@ -3,10 +3,7 @@
     padding: 25px;
     background-color: whitesmoke;
     width: 100%;
-    
-    @include desktop {
-        position: absolute;
-    }
+    position: absolute;
 }
   
 .sidebar {

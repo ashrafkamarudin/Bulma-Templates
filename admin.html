@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- CSRF Token -->
+	<meta content="" name="csrf-token">
+	<title>Admin - Dashboard</title><!-- Scripts -->
+
+	<script defer src="">
+    </script>
+    
+    <!-- Fonts -->
+	<link href="https://fonts.gstatic.com" rel="dns-prefetch">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Styles -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" rel="stylesheet">
+	<link href="css/app.css" rel="stylesheet">
+	<link href="css/admin.css" rel="stylesheet">
+</head>
+<body>
+	<div id="app">
+		<nav class="navbar has-shadow">
+			<div class="container nav-admin">
+				<div class="navbar-menu">
+					<div class="navbar-start">
+						<a class="navbar-item is-tab is-active">Learn</a> <a class="navbar-item is-tab">Discuss</a> <a class="navbar-item is-tab">Share</a>
+					</div><!-- end of .navbar-start -->
+					<div class="navbar-end nav-menu" style="overflow: visible">
+						<div class="navbar-item has-dropdown is-hoverable">
+							<a class="navbar-link">Hey Admin</a>
+							<div class="navbar-dropdown is-right">
+								<a class="navbar-item" href="#"><span class="icon"><i class="fa fa-fw fa-user-circle-o m-r-5"></i></span> Profile</a> <a class="navbar-item" href="#"><span class="icon"><i class="fa fa-fw fa-bell m-r-5"></i></span> Notifications</a> <a class="navbar-item" href=""><span class="icon"><i class="fa fa-fw fa-cog m-r-5"></i></span> Manage</a>
+								<hr class="navbar-divider">
+								<a class="navbar-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="icon"><i class="fa fa-fw fa-sign-out m-r-5"></i></span> Logout</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<aside class="menu sidebar">
+			<div class="navbar-brand">
+				<a class="navbar-item is-paddingless brand-item" href="{{route('home')}}"><img alt="DevMarketer logo" src="images/logo-simple.png"></a> <a class="navbar-item is-hidden-desktop" id="admin-slideout-button"><span class="icon"><i class="fa fa-arrow-circle-right"></i></span></a> <button class="button navbar-burger"><span></span> <span></span> <span></span></button>
+			</div>
+			<p class="menu-label">General</p>
+			<ul class="menu-list">
+				<li>
+					<a class="is-active">Dashboard</a>
+				</li>
+				<li>
+					<a>Customers</a>
+				</li>
+			</ul>
+			<p class="menu-label">Administration</p>
+			<ul class="menu-list">
+				<li>
+					<a>Team Settings</a>
+				</li>
+				<li>
+					<a>Manage Your Team</a>
+					<ul>
+						<li>
+							<a>Members</a>
+						</li>
+						<li>
+							<a>Plugins</a>
+						</li>
+						<li>
+							<a>Add a member</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a>Invitations</a>
+				</li>
+				<li>
+					<a>Cloud Storage Environment Settings</a>
+				</li>
+				<li>
+					<a>Authentication</a>
+				</li>
+			</ul>
+			<p class="menu-label">Transactions</p>
+			<ul class="menu-list">
+				<li>
+					<a>Payments</a>
+				</li>
+				<li>
+					<a>Transfers</a>
+				</li>
+				<li>
+					<a>Balance</a>
+				</li>
+			</ul>
+		</aside>
+		<main class="content-area" id="wrapper">
+			<div class="container is-marginless">
+				<div class="columns">
+					<div class="column is-12">
+						<h1 class="m-b-25">
+                            <span class="title is-size-1">Dashboard</span>
+
+						    <nav aria-label="breadcrumbs" class="breadcrumb is-pulled-right m-t-15">
+                                <ul>
+                                    <li>
+                                        <a href="../">Bulma</a>
+                                    </li>
+                                    <li>
+                                        <a href="../">Templates</a>
+                                    </li>
+                                    <li>
+                                        <a href="../">Examples</a>
+                                    </li>
+                                    <li class="is-active">
+                                        <a href="#">Admin</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </h1>
+						<section class="info-tiles m-b-15">
+							<div class="tile is-ancestor has-text-centered">
+								<div class="tile is-parent">
+									<article class="tile is-child box">
+										<p class="title">439k</p>
+										<p class="subtitle">Users</p>
+									</article>
+								</div>
+								<div class="tile is-parent">
+									<article class="tile is-child box">
+										<p class="title">59k</p>
+										<p class="subtitle">Products</p>
+									</article>
+								</div>
+								<div class="tile is-parent">
+									<article class="tile is-child box">
+										<p class="title">3.4k</p>
+										<p class="subtitle">Open Orders</p>
+									</article>
+								</div>
+								<div class="tile is-parent">
+									<article class="tile is-child box">
+										<p class="title">19</p>
+										<p class="subtitle">Exceptions</p>
+									</article>
+								</div>
+							</div>
+						</section>
+						<div class="columns">
+							<div class="column is-6">
+								<div class="card events-card">
+									<header class="card-header">
+										<p class="card-header-title">Events</p><a aria-label="more options" class="card-header-icon" href="#"><span class="icon"><i aria-hidden="true" class="fa fa-angle-down"></i></span></a>
+									</header>
+									<div class="card-table">
+										<div class="content">
+											<table class="table is-fullwidth is-striped">
+												<tbody>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+													<tr>
+														<td width="5%"><i class="fa fa-bell-o"></i></td>
+														<td>Lorum ipsum dolem aire</td>
+														<td>
+															<a class="button is-small is-primary" href="#">Action</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<footer class="card-footer">
+										<a class="card-footer-item" href="#">View All</a>
+									</footer>
+								</div>
+							</div>
+							<div class="column is-6">
+								<div class="card m-b-15">
+									<header class="card-header">
+										<p class="card-header-title">Inventory Search</p><a aria-label="more options" class="card-header-icon" href="#"><span class="icon"><i aria-hidden="true" class="fa fa-angle-down"></i></span></a>
+									</header>
+									<div class="card-content">
+										<div class="content">
+											<div class="control has-icons-left has-icons-right">
+												<input class="input is-large" placeholder="" type="text"> <span class="icon is-medium is-left"><i class="fa fa-search"></i></span> <span class="icon is-medium is-right"><i class="fa fa-check"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card">
+									<header class="card-header">
+										<p class="card-header-title">User Search</p><a aria-label="more options" class="card-header-icon" href="#"><span class="icon"><i aria-hidden="true" class="fa fa-angle-down"></i></span></a>
+									</header>
+									<div class="card-content">
+										<div class="content">
+											<div class="control has-icons-left has-icons-right">
+												<input class="input is-large" placeholder="" type="text"> <span class="icon is-medium is-left"><i class="fa fa-search"></i></span> <span class="icon is-medium is-right"><i class="fa fa-check"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

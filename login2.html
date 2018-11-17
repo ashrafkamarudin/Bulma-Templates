@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- CSRF Token -->
+	<meta content="" name="csrf-token">
+	<title>Login</title><!-- Scripts -->
+
+	<script defer src="">
+    </script>
+    
+    <!-- Fonts -->
+	<link href="https://fonts.gstatic.com" rel="dns-prefetch">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- Styles -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" rel="stylesheet">
+	<link href="css/app.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar has-shadow">
+		<div class="container nav-admin">
+			<div class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item is-tab"><span class="icon m-r-5"><i class="fa fa-home"></i></span> Home</a> <a class="navbar-item is-tab"><span class="icon m-r-5"><i class="fa fa-github"></i></span> Github</a> <a class="navbar-item is-tab"><span class="icon m-r-5"><i class="fa fa-user-o"></i></span> Profile</a>
+				</div><!-- end of .navbar-start -->
+				<div class="navbar-end nav-menu" style="overflow: visible">
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-item is-tab is-active" href="">Login</a> <a class="navbar-item is-tab" href="">Join the Community</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<main class="container">
+		<section class="section" id="login">
+			<div class="box is-paddingless" style="width: 900px;margin: 120px auto auto auto">
+				<div class="columns">
+					<div class="column is-5 hero is-info">
+						<div class="hero-body">
+							<div class="container">
+								<span class="fa fa-sign-in is-size-1"></span>
+								<h1 class="title">Simple Login Form</h1>
+								<h2 class="subtitle">Made with Bulma</h2>
+							</div>
+							<div class="box m-t-100">
+								<ul>
+									<li>Benefit #1</li>
+									<li>Benefit #2</li>
+									<li>Benefit #3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="column is-7 p-l-30 p-r-30 hero is-white">
+						<div class="hero-body">
+							<h4 class="title">Login</h4>
+							<hr>
+							<form action="http://localhost:8000/login" method="post" style="padding-bottom: 30px">
+								<div class="field">
+									<label class="label has-text-black">E-Mail</label>
+									<div class="control">
+										<input class="input" name="list_name" placeholder="Text input" type="text">
+									</div>
+								</div>
+								<div class="field">
+									<label class="label has-text-black">Password</label>
+									<div class="control">
+										<input class="input" name="list_name" placeholder="Text input" type="password">
+									</div>
+								</div>
+								<div class="field">
+									<a class="is-pulled-right">Forgot Password?</a>
+								</div>
+								<div class="control">
+									<br>
+									<button class="button is-info p-l-25 p-r-25">Login</button>
+									<div class="form-footer is-pulled-right has-text-grey inline">
+										OR login with <span class="icon box m-l-10"><i class="fa fa-facebook"></i></span> <span class="icon box m-l-5"><i class="fa fa-google"></i></span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

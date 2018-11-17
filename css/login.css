@@ -1,0 +1,13 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: whitesmoke; }
+
+.word-wrap {
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-wrap: break-word; }
+
+.img {
+  width: 450px;
+  height: 350px; }
